@@ -1,0 +1,23 @@
+{% extends "blogs/base.html" %}  <!-- Able to extend from base.html from blog app to here-->
+{% load static %}
+
+{% block pageheading %}
+  Logout
+{% endblock pageheading %}
+
+{% block subheading %}
+    See you soon!
+{% endblock subheading %}
+
+{% block background %}
+    {% static 'img/about-bg.jpg' %}
+{% endblock background %}
+
+{% block content %}
+        <h2> You have been logged out!</h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                <a href="{% url 'login' %}">Log In Again</a>
+            </small>
+        </div>
+{% endblock content%}

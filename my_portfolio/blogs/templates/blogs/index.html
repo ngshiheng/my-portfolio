@@ -1,0 +1,36 @@
+{% extends "blogs/base.html" %}
+{% load static %}
+
+{% block pageheading %}
+  Blog Home Page
+{% endblock pageheading %}
+
+{% block subheading %}
+  This is a simple blog website
+{% endblock subheading %}
+
+{% block background %}
+    {% static 'img/home-bg.jpg' %}
+{% endblock background %}
+
+
+
+
+{% block content %}
+  {% for post in posts %}
+    <div class="post-preview">
+        <a href="{% url 'post-detail' post.id %}">
+            <h2 class="post-title">
+                {{ post.title }}
+            </h2>
+            <h3 class="post-subtitle">
+                {{ post.date_posted|date:"F d, Y (D)" }}
+            </h3>
+        </a>
+        <p class="post-meta">Posted by
+            <a href="#">{{ post.author }}</a>
+            </p>
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock content %}

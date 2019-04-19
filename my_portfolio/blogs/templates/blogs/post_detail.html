@@ -1,0 +1,37 @@
+{% extends "blogs/base.html" %}
+{% load static %}
+
+{% block pageheading %}
+  {{ object.title }}
+{% endblock pageheading %}
+
+{% block subheading %}
+  {{ object.author }}
+{% endblock subheading %}
+
+{% block background %}
+    {% static 'img/post-bg.jpg' %}
+{% endblock background %}
+
+{% block content %}
+    <article class="media content-section">
+
+            <div class="media-body">
+                <div class="article-metadata">
+                    Posted by: <a class="mr-2" href="{% url 'profile' %}">{{ object.author }}</a>on {{ object.date_posted|date:"F d, Y (D)" }}
+                    <br>
+                    <small class="text-muted">Last modified: {{ object.last_modified|date:"F d, Y (D) h:i:s a" }}</small>
+
+                    <div>
+                        {% if object.author == user %}
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+                        {% endif %}
+                    </div>
+
+                </div>
+                <h2 class="article-title">{{ object.title }}</h2>
+                <p class="article-content">{{ object.content }}</p>
+            </div>
+        </article>
+{% endblock content%}

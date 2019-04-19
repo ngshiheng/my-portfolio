@@ -1,0 +1,30 @@
+{% extends "blogs/base.html" %}
+{% load static %}
+
+{% block pageheading %}
+  {{ object.title }}
+{% endblock pageheading %}
+
+{% block subheading %}
+  {{ object.author }}
+{% endblock subheading %}
+
+{% block background %}
+    {% static 'img/post-bg.jpg' %}
+{% endblock background %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Delete Post</legend>
+                <h2>You are attempting to delete "{{ object.title }}", are you sure?"</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content%}

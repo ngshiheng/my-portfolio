@@ -1,0 +1,33 @@
+{% extends "blogs/base.html" %}
+{% load static %}
+
+{% block pageheading %}
+  {{ object.title }}
+{% endblock pageheading %}
+
+{% block subheading %}
+  {{ object.author }}
+{% endblock subheading %}
+
+{% block background %}
+    {% static 'img/post-bg.jpg' %}
+{% endblock background %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Blog Post</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+                <a class="btn btn-outline-danger" href="{% url 'blog-index' %}">Cancel</a>
+
+            </div>
+        </form>
+    </div>
+{% endblock content%}
