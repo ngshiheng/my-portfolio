@@ -1,5 +1,13 @@
-/Lib
-/Scripts
-/.idea
-pyenv.cfg
+.idea/
+Lib/
+Scripts/
+pyvenv.cfg
+
+
+
+
+
+
+
+
 
