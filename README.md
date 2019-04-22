@@ -6,7 +6,7 @@ rev00 features added:
 - Templates
 - Administration page
 - Database models
-- Userr egistrationf orm
+- User registration form
 - Login and logout authentication
 - Profile and images
 - Update user profile
@@ -14,4 +14,6 @@ rev00 features added:
 
 rev01 features added:
 - Pagination
+
+rev02 features added:
 - User password reset
