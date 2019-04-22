@@ -14,7 +14,6 @@
     {% static 'img/about-bg.jpg' %}
 {% endblock background %}
 
-
 {% block content %}
     <div class="content-section">
         <form method="POST">
@@ -26,9 +25,10 @@
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Login</button>
-
+                <small class="test-muted ml-2">
+                    <a href="{% url 'password_reset' %}">Forgot password?</a>
+                </small>
             </div>
-
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
@@ -37,5 +37,4 @@
         </div>
 
     </div>
-
 {% endblock content%}
