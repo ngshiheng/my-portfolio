@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('portfolio/', include('portfolio.urls')),
     path('', include('blogs.urls')),
     path('register/', user_views.register, name='register'),  # e.g. localhost:8000/register
     path('profile/', user_views.profile, name='profile'),  # e.g. localhost:8000/profile
