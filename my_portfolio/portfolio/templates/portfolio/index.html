@@ -39,13 +39,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'blog-index' %}">Blog</a>
           </li>
         </ul>
       </div>
@@ -86,7 +89,7 @@
                   <h4 class="subheading">Swinburne University of Technology</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Graduated with distinction in Bachelor's Degree in Engineering (Electrical & Electronics)</p>
+                    <p class="text-muted">Graduated with distinction in Bachelor's Degree in Engineering (Electrical & Electronics)</p>
                 </div>
               </div>
             </li>
@@ -104,39 +107,11 @@
                 </div>
               </div>
             </li>
-            <li>
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/3.jpg' %}" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>December 2012</h4>
-                  <h4 class="subheading">Transition to Full Service</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/4.jpg' %}" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>July 2014</h4>
-                  <h4 class="subheading">Phase Two Expansion</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <h4>Be Part
-                  <br>Of Our
-                  <br>Story!</h4>
+                <h4>Let Me be
+                  <br>Part of
+                  <br>Your Story!</h4>
               </div>
             </li>
           </ul>
@@ -152,7 +127,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Portfolio</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3 class="section-subheading text-muted">This is where I share some of the things I've made during my free time :)</h3>
         </div>
       </div>
       <div class="row">
