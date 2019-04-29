@@ -19,3 +19,7 @@ rev01 features added:
 rev02 features added:
 - User password reset
 
+rev03 features added:
+- Added portfolio page
+- Modified some URLs linking between pages
+- Updated some contents
