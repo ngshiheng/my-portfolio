@@ -23,3 +23,8 @@ rev03 features added:
 - Added portfolio page
 - Modified some URLs linking between pages
 - Updated some contents
+
+rev04 features added:
+- Updated portfolio page with Django template language
+- Added some projects into portfolio database
+- Updated page styling
