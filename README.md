@@ -28,3 +28,8 @@ rev04 features added:
 - Updated portfolio page with Django template language
 - Added some projects into portfolio database
 - Updated page styling
+
+rev05 features added:
+- Added image into portfolio database for each project
+- Minor update on page content
+- Updated 'Modal' part of the page
