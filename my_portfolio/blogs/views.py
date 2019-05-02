@@ -3,6 +3,7 @@ from .models import Post
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 def about(request):
@@ -65,7 +66,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    success_url = '/'       # sends user to home page after successful deleting post
+    success_url = '/blogs'       # sends user to blog's home page after successful deleting post
 
     def test_func(self):
         post = self.get_object()
