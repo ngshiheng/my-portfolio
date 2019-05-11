@@ -41,7 +41,25 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
+    'storages',
 ]
+
+AWS_STORAGE_BUCKET_NAME = 'django-portfolio-ngshiheng'
+AWS_S3_REGION_NAME = 'ap-southeast-1'  # e.g. us-east-2
+AWS_ACCESS_KEY_ID = 'AKIAX4AYBZUSO5Y63FCW'
+AWS_SECRET_ACCESS_KEY = 'PEDaV2D1I0P59lPN8qSgB4CGXFLEK6BtfcyCC11w'
+
+# Tell django-storages the domain to use to refer to static files.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_DEFAULT_ACL = None
+
+# Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
+# you run `collectstatic`).
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
