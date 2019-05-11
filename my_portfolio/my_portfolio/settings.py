@@ -25,7 +25,7 @@ SECRET_KEY = 'uf&l-^i&btc1w(-z@==12g+763y5ex&mit1jk+&1-v%x3_cavj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-54-169-160-236.ap-southeast-1.compute.amazonaws.com','ec2-13-229-240-11.ap-southeast-1.compute.amazonaws.com','ec2-18-136-126-255.ap-southeast-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['127.0.0.1','django-env.zjwqkqbwfz.us-west-2.elasticbeanstalk.com','django-env.5vg7z2afp6.us-west-2.elasticbeanstalk.com','django-env.d4pfjdpmpn.ap-southeast-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -87,7 +88,18 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+'''
 
+
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -126,6 +138,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
