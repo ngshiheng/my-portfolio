@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'uf&l-^i&btc1w(-z@==12g+763y5ex&mit1jk+&1-v%x3_cavj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','django-env.d4pfjdpmpn.ap-southeast-1.elasticbeanstalk.com']
 
@@ -35,8 +35,8 @@ INSTALLED_APPS = [
 if DEBUG == False:
     AWS_STORAGE_BUCKET_NAME = 'django-portfolio-ngshiheng'
     AWS_S3_REGION_NAME = 'ap-southeast-1'  # e.g. us-east-2
-    AWS_ACCESS_KEY_ID = 'AKIAX4AYBZUSO5Y63FCW'
-    AWS_SECRET_ACCESS_KEY = 'PEDaV2D1I0P59lPN8qSgB4CGXFLEK6BtfcyCC11w'
+    AWS_ACCESS_KEY_ID = ''
+    AWS_SECRET_ACCESS_KEY = ''
 
     # Tell django-storages the domain to use to refer to static files.
     AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
@@ -157,3 +157,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('DJANGO_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_PASS')
+
+
