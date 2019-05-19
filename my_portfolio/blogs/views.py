@@ -3,7 +3,6 @@ from .models import Post
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
-from django.urls import reverse
 
 
 def about(request):

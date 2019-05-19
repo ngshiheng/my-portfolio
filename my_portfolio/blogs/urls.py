@@ -6,7 +6,6 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', PostListView.as_view(), name='blog-index'),
-    path('contact/', views.contact, name='blog-contact'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
