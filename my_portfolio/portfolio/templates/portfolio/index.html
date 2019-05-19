@@ -187,7 +187,7 @@
         </div>
         {% block content %}
         <div class="row">
-            {% for project in projects %}
+            {% for project in project_list %}
             <div class="col-md-4 col-sm-6 portfolio-item">
                 <a class="portfolio-link" data-toggle="modal" href="#portfolioModal{{ project.id }}">
                     <div class="portfolio-hover">
@@ -220,8 +220,21 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <form action="" method="post">
+                <form action="" method="post" novalidate>
                     {% csrf_token %}
+
+                    {% for hidden_field in form.hidden_fields %}
+                        {{ hidden_field }}
+                    {% endfor %}
+
+                    {% if form.non_field_errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for error in form.non_field_errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -306,7 +319,7 @@
 
 
 <!-- Modal -->
-{% for project in projects %}
+{% for project in project_list %}
 <div class="portfolio-modal modal fade" id="portfolioModal{{ project.id }}" tabindex="-1" role="dialog"
      aria-hidden="true">
     <div class="modal-dialog">
