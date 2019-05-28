@@ -4,16 +4,8 @@ Include/
 Scripts/
 pyvenv.cfg
 
-
-
-
-
-
-
-
-
-
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+venv-my-portfolio/
