@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is my personal portfolio that I've created using Django framework in order to showcase my blog application and my other projects on GitHub.
+This is my personal portfolio that I've created using Django framework in order to showcase my blog application and my other projects on GitHub. I've hosted my portfolio application through AWS Elastic Beanstalk and you may find it here at: http://django-env.d4pfjdpmpn.ap-southeast-1.elasticbeanstalk.com
 
 ## Features
 rev00 features added:
