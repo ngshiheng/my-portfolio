@@ -1,6 +1,8 @@
-# my-portfolio
-This is my personal portfolio whereby I showcase the blog I've created using Django and also my other GitHub projects.
+# My Portfolio
 
+This is my personal portfolio that I've created using Django framework in order to showcase my other projects on GitHub.
+
+## Features
 rev00 features added:
 - Application and routes
 - Templates
@@ -33,3 +35,26 @@ rev05 features added:
 - Added image into portfolio database for each project
 - Minor update on page content
 - Updated 'Modal' part of the page
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```python
+pip install -r my_portfolio/requirements.txt
+```
+
+## Usage
+
+```bash
+cd my_portfolio
+python manage.py runserver
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+N/A
